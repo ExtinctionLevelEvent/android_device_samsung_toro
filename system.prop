@@ -1,0 +1,24 @@
+#
+# system.prop for toro
+#
+## cannot take spaces
+rild.libargs=-d /dev/ttys0
+
+# Fields For Custom RIL
+rild.libpath=/vendor/lib/libsec-ril_lte.so
+telephony.lteOnCdmaDevice=1
+ro.config.svlte1x=true
+
+# RIL Sends Only One RIL_UNSOL_CALL_RING
+ro.telephony.call_ring.multiple=0
+
+# Turn On IMS By Default
+persist.radio.imsregrequired=1
+persist.radio.imsallowmtsms=1
+
+# Default Ecclist
+ro.ril.ecclist=112,911,#911,*911
+
+# Default to LTE/CDMA Network Mode
+ro.telephony.default_network=7
+
